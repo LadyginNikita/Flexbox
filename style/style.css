@@ -1,11 +1,19 @@
 
 .title{text-align: center;}
 
-.begin-div__title--blue:hover{color: blue;}
+.container {
+    width: 280px;
+    margin: 70px;
+    padding: 40px;
+    border: 10px solid #59c5c7;}
 
-.begin-div__span--red{color: red;}
+.container__title--blue:hover{color: blue;}
 
-.section__title{color: yellow;}
+.container__span--red{color: red;}
+
+.section__title:active{color: yellow;}
+
+.section__item{text-align: left;}
 
 .section__link{color:violet;}
 
