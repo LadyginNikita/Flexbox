@@ -1,0 +1,17 @@
+<div class="blog-listing @@class">
+    <h2 class="blog-listing__section-title section-title">Блог</h2>
+</div>
+
+<div class="blog-listing__list">
+    @@loop('blog-card.html', [
+      {
+        "class": "listing__article-card",
+        "img": "assets/images/blog/theatre.jpg",
+        "alt": "Theatre Photosession",
+        "title": "Фотосессия в стенах Театра драмы",
+        "descr": "Организовывая фотосессию для...",
+        "time": "26.11.2021",
+        "datetime": "2021-11-26T00:00"
+      }
+    ])
+</div>

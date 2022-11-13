@@ -1,0 +1,47 @@
+html, 
+body{
+    /* Обнуление размеров */
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+}
+
+body{
+    box-sizing: border-box; /* Внутри блока учитываются внутренние отступы */
+    display: flex; /* Элемент ведет себя как блочный */
+    flex-direction: column; /* Расположение главной оси */
+    min-height: 100vh; /* min высота 100% от размеров страницы */
+    background-color: @gray;
+    background-image: url(../assets/images/noise.png);
+    background-position: 0 0, 0 0;
+    background-size: auto, 100% auto;
+    background-repeat: repeat, repeat-y;
+    font-family: @font1; /* Шрифт */
+    color: @black;
+    font-weight: 400; /* Толщина шрифта*/
+    font-size: 16px;
+    line-height: 1.3; /* Высота строчного элемента Size/line-height*/
+    overflow-x: hidden;
+    padding-top: 147px; /* Отступ от шапки */
+}
+
+.main{
+  /* grow shrink basic*/
+  flex: 1 0 auto; /* Элементы растягиваются по высоте; не сжимаются; высота(auto) */
+}
+
+.page-footer{
+  flex: 0 0 auto; /* Элементы не растягиваются по высоте; не сжимаются; высота(auto) */
+}
+
+a {
+  color: @black;
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

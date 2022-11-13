@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "mak";
+  src: local("MAK-bold"), url("../assets/fonts/MAK-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mak";
+  src: local("MAK-light"), url("../assets/fonts/MAK-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+html,
+body {
+  /* Обнуление размеров */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Внутри блока учитываются внутренние отступы */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Элемент ведет себя как блочный */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расположение главной оси */
+  min-height: 100vh;
+  /* min высота 100% от размеров страницы */
+  background-color: #dedede;
+  background-image: url(../assets/images/noise.png);
+  background-position: 0 0, 0 0;
+  background-size: auto, 100% auto;
+  background-repeat: repeat, repeat-y;
+  font-family: "Open Sans", sans-serif;
+  /* Шрифт */
+  color: #1F1E1E;
+  font-weight: 400;
+  /* Толщина шрифта*/
+  font-size: 16px;
+  line-height: 1.3;
+  /* Высота строчного элемента Size/line-height*/
+  overflow-x: hidden;
+  padding-top: 147px;
+  /* Отступ от шапки */
+}
+.main {
+  /* grow shrink basic*/
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  /* Элементы растягиваются по высоте; не сжимаются; высота(auto) */
+}
+.page-footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  /* Элементы не растягиваются по высоте; не сжимаются; высота(auto) */
+}
+a {
+  color: #1F1E1E;
+  outline: none;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Центрирование внутри контейнера */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 40px;
+  /* Отступы по вертикали 15 по горизонтали 40 */
+  border: 1px solid #1F1E1E;
+  /* Свойства границы ссылки */
+  background: transparent;
+  /* Прозрачный фон */
+  text-decoration: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: center;
+  color: #1F1E1E;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  -o-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+}
+.btn:hover,
+.btn:active {
+  color: #ffffff;
+  background-color: #1F1E1E;
+}
+.section-title {
+  margin: 0 auto;
+  margin-top: 147px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 40px;
+  border: 1px solid #1F1E1E;
+  background: #1F1E1E;
+  font-family: "Lora", serif;
+  width: 624px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.27;
+  color: #ffffff;
+}
+.blog-card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.blog-card__blog-listing {
+  margin-bottom: 95px;
+}
+.events-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 30px 120px;
+  margin-top: 150px;
+  width: 405px;
+  min-width: 280px;
+  width: calc(33.333% - 60px);
+}
+.events-card__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-decoration: none;
+  color: #1F1E1E;
+}
+.events-card__picture {
+  display: block;
+  /* Элемент показывается как блочный */
+  margin-bottom: 25px;
+  position: relative;
+  /* Пропорциональное изменение изображения */
+}
+.events-card__picture::before {
+  content: "";
+  /* Обязательно нужно указать */
+  display: block;
+  padding-top: 107.16%;
+  /*высоту блока поделить на ширину и *100*/
+  width: 100%;
+}
+.events-card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.listing__events-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* Элементы переносятся на новые строки */
+  margin: 0 -30px;
+}
+.reserve {
+  display: grid;
+  gap: 65px 11%;
+  /* Отступы между строками и столбцами */
+  grid-template-columns: 405px calc(89% - 405px);
+  /* Количество колонок в сетке и определяет ширину каждой из них */
+  grid-template-areas: "check-box scheme" "order legend";
+  width: 100%;
+}
+.reserve__check-box {
+  grid-area: check-box;
+}
+.reserve__scheme {
+  grid-area: scheme;
+}
+.reserve__order {
+  grid-area: order;
+}
+.reserve__legend {
+  grid-area: legend;
+}
+.events {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1414px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.page-header {
+  position: fixed;
+  /* не меняет местоположение при прокрутке страницы*/
+  /* Местоположение шапки */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* page-header занимает 100% ширины контейнера */
+  height: 147px;
+  /* Фиксированная высота */
+  background: rgba(222, 222, 222, 0.98);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  z-index: 100;
+}
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .page-header {
+    /* Поддержка данного свойства браузерами */
+    background-color: rgba(222, 222, 222, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+}
+.page-header__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Учет внутренних отступов */
+  width: 100%;
+  max-width: 1414px;
+  /* Max ширина контейнера */
+  margin: 0 auto;
+  /* Контейнер по центру */
+  /* Левый и правый отступы */
+  padding-left: 40px;
+  padding-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Элемент ведет себя как блочный */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Элементы по обочной оси будут по центру*/
+}
+.page-header__logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  /* Логотип не сжимается */
+  /* Ширина и высота Лого*/
+  width: 202px;
+  height: 147px;
+  text-decoration: none;
+  /* Чтобы не было нижнего подчеркивания у ссылки */
+  font-size: 0;
+  /* Лишние отступы не отображались в других браухерах */
+}
+.page-header__logo-icon {
+  width: 100%;
+  height: 100%;
+}
+.page-header__nav {
+  margin: 0 auto;
+  /* Контейнер по центру*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.page-header__nav-link {
+  margin: 0 25px;
+  /* Оформление */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
+  /* line-height делим на размер шрифта */
+  color: #1F1E1E;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  /* При наведении на ссылку будет изменяться цвет за 0,2 секунды */
+}
+.page-header__nav-link:hover {
+  color: #bc3324;
+}
+.page-header__nav-link:active {
+  color: #bc3324;
+}
+.page-header__right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  /* Контент записывается в конце контейнера */
+  width: 202px;
+}

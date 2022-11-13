@@ -1,0 +1,22 @@
+.reserve{
+    display: grid;
+    gap: 65px 11%; /* Отступы между строками и столбцами */
+    grid-template-columns: 405px calc(89% - 405px); /* Количество колонок в сетке и определяет ширину каждой из них */
+    grid-template-areas: /* Заполняет сетку элементами "checks scheme""order legend"*/
+    "check-box scheme"
+    "order legend"; 
+    width: 100%;
+
+    &__check-box {
+        grid-area: check-box;
+    }
+        &__scheme {
+        grid-area: scheme;
+    }
+    &__order {
+        grid-area: order;
+    }
+    &__legend {
+        grid-area: legend;
+    }
+}
